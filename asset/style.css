@@ -1,0 +1,10 @@
+header {
+    
+    background: linear-gradient(to right,rgb(247, 3, 3), rgb(0, 0, 255), rgb(0, 251, 0), rgb(254, 254, 3));
+}
+.headerTitle {
+    text-align: center;
+    height: 60px;
+    padding-top: 15px;
+    font-size: 40px;
+}

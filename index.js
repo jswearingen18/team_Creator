@@ -1,14 +1,23 @@
 const inquirer = require('inquirer');
 const fs = require('fs')
 
-const generateHTML = ({}) =>
+const generateHTML = ({name, email, github}) =>
 `<!DOCTYPE html>
 <html lang="en-us">
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="asset\style.css">
+    <link rel="stylesheet" href="asset/style.css">
     <title>JSwearingen Team Profile</title>
-</head>`;
+</head>
+<header>
+    <h1 class="headerTitle">Jeremiah Swearingen's Team</h1>
+</header>
+<body>
+<div>
+    <h2>${name}</h2>
+    <h4>${email}</h4>
+    <h4>${github}</h4>
+</body>`;
 
 inquirer.prompt([
 {
