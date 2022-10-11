@@ -40,7 +40,7 @@ inquirer.prompt([
 .then((answers) => {
     const htmlContent = generateHTML(answers);
 
-    fs.writeFile("index.html", htmlContent, (err) =>
+    fs.writeFile("develop/index.html", htmlContent, (err) =>
     err ? console.log(err) : console.log("Successfully created HTML!")
     )
 });
