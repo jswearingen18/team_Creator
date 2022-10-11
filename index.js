@@ -1,7 +1,18 @@
 const inquirer = require('inquirer');
 const fs = require('fs')
+const Employee = require('./employee');
+const { manager } = require('./manager');
+const { engineer } = require('./engineer');
+const { intern } = require('./intern');
 
-const generateHTML = ({name, email, github}) =>
+const employee = new Employee(manager, engineer, intern);
+
+employee.getName(name);
+employee.getId(id);
+employee.getEmail();
+employee.getRole();
+
+const generateHTML = ({name, email, role}) =>
 `<!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -16,26 +27,11 @@ const generateHTML = ({name, email, github}) =>
 <div>
     <h2>${name}</h2>
     <h4>${email}</h4>
-    <h4>${github}</h4>
+    <h4>${role}</h4>
 </body>`;
 
-inquirer.prompt([
-{
-    name: "name",
-    message: "What is the team member's name?",
-    type: "input",
-},
-{
-    name: "email",
-    message: "What is the team member's email address?",
-    type: "input",
-},
-{
-    name: "github",
-    message: "What is the team member's github username?",
-    type: "input",
-},
-])
+
+
 
 .then((answers) => {
     const htmlContent = generateHTML(answers);
