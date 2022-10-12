@@ -10,12 +10,7 @@ class Employee {
 }
 
 const getName = (name) => {
-    inquirer.prompt([
-        { name: "name",
-          message: "What is the team member's name?",
-          type: "input",
-        },
-    ]) 
+   
     return name;
 };
 
@@ -26,21 +21,11 @@ const getId = (id) => {
 };
 
 const getEmail = (email) => {
-    inquirer.prompt([
-        { name: "email",
-          message: "What is your team member's email address",
-          type: "input",
-        }
-    ])
+   
     return email;
 };
 const getRole = (role) => {
-    inquirer.prompt([
-        { name: "role",
-          message: "What is your team member's role?",
-          type: "input",
-        }
-    ])
+
     return role;
 };
 module.exports = {

@@ -4,10 +4,10 @@
 It takes user input and build an html file with team members role and info needed per role
 
 ## Github URL link
-
+https://jswearingen18.github.io/team_Creator/
 
 ## Github Repository link
-
+https://github.com/jswearingen18/team_Creator
 
 ## Badges
 N/A
